@@ -1,52 +1,418 @@
-# Prerequisites
-*.d
+// 14 write a program to check pailindrom number
+/*#include<stdio.h>
+int main() {
+    int a,b,c,reverse,d;
+    printf("enter number:");
+    scanf("%d",&a);
+    d=a;
+    while(a!=0) {
+        b=a%10;
+        reverse=reverse*10+b;
+        a/=10;
+    };
+    if(d==reverse) {
+        printf("%d:pailindrom number",d);
+    }
+    else {
+        printf("%d:not pailindrom number",d);
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+    }
 
-# Linker output
-*.ilk
-*.map
-*.exp
+    return 0;
+}
+*/
+// 20 write a program to check Armstrong number
+/*#include<stdio.h>
+int main()
+{
+    int n,r,sum=0,temp;
+    printf("enter the number=");
+    scanf("%d",&n);
+    temp=n;
+    while(n>0)
+    {
+        r=n%10;
+        sum=sum+(r*r*r);
+        n=n/10;
+    }
+    if(temp==sum)
+        printf("armstrong  number ");
+    else
+        printf("not armstrong number");
+    return 0;}
+*/
 
-# Precompiled Headers
-*.gch
-*.pch
+// 19 write a program Fibonacci series
+/*#include<stdio.h>
+int main()
+{
+    int n1=0,n2=1,n3,i,number;
+    printf("Enter the number of elements:");
+    scanf("%d",&number);
+    printf("\n%d %d",n1,n2);
+    for(i=2; i<number; ++i)
+    {
+        n3=n1+n2;
+        printf(" %d",n3);
+        n1=n2;
+        n2=n3;
+    }
+    return 0;
+}*/
+// 18 product of the two Matrix
+/*#include<stdio.h>
+#define max 100
+int main()
+{
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+    int a[max][max],e[max][max],m[max][max],i,j,d,k,b;
+    printf("enter row:");
+    scanf("%d",&d);
+    printf("enter column:");
+    scanf ("%d",&b);
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+    printf ("enter matrix:");
+    for(i=0; i<d; i++) {
+        for(j=0; j<b; j++) {
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf("enter second Matrix:");
+    for(i=0; i<d; i++) {
+        for(j=0; j<b; j++) {
+            scanf("%d",&m[i][j]);
+        }
+    }
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+    for(i=0; i<d; i++) {
+        for(j=0; j<b; j++) {
+            for(k=0; k<b; k++) {
+                e[i][j]+=a[i][j]*m[j][i];
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+            }
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+        }
+    }
+
+    printf("product of the two Matrix:");
+    for(i=0; i<d; i++) {
+        for(j=0; j<b; j++) {
+            printf("\t%d",e[i][j]);
+
+        }
+        printf("\n");
+
+    }
+    return 0;
+}
+*/
+//17 write a program to additional two Matrix
+/*#include<stdio.h>
+#define max 100
+int main()
+{
+
+    int a[max][max],e[max][max],m[max][max],i,j,d,b;
+    printf("enter row:");
+    scanf("%d",&d);
+    printf("enter column:");
+    scanf ("%d",&b);
+
+    printf ("enter matrix:");
+    for(i=0; i<d; i++) {
+        for(j=0; j<b; j++) {
+            scanf ("%d",&a[i][j]);
+        }
+    }
+    printf("enter second Matrix:");
+    for(i=0; i<d; i++) {
+        for(j=0; j<b; j++) {
+            scanf("%d",&m[i][j]);
+        }
+    }
+    
+    for(i=0; i<d; i++) {
+        for(j=0; j<b; j++) {
+            e[i][j]=a[i][j]+m[i][j];
+
+
+
+        }
+    }
+    printf("additional of two d array:\n");
+    for(i=0; i<d; i++) {
+        for(j=0; j<b; j++) {
+            printf("\t%d",e[i][j]);
+        }
+        printf("\n");
+
+        return 0;
+    }*/
+//16 write a program to calculate prime number given range
+/*#include <stdio.h>
+    int main() {
+        int a,b,i,j,temp, count;
+        printf("enter two numbers:");
+        scanf("%d%d",&a,&b);
+        for(i=a; i<=b; i++) {
+            count=0;
+            for(j=1; j<=i; j++) {
+                if(i%j==0) {
+                    count++;
+                }
+            }
+
+            if(count==2) {
+                printf("\n%d",i);
+            }
+        }
+        return 0;
+    }*/
+//15 write a program to check prime or not
+/*#include <stdio.h>
+    int main() {
+        int a, i, temp = 0;
+        printf("Enter a positive integer: ");
+        scanf("%d", &a);
+        for (i = 2; i<a; i++) {
+            if (a % i == 0) {
+                temp = 1;
+                break;
+            }
+        }
+        if(temp==0) {
+            printf("prime");
+        }
+        else {
+            printf("not prime");
+        }
+
+
+        return 0;
+    }
+*/
+//12 write a program to calculate factorial of given number
+/*#include <stdio.h>
+    int main() {
+        int a,i,f=1;
+        printf("enter number:");
+        scanf("%d",&a);
+        printf("%d factorial:",a);
+        for (i=1; i<=a; i++) {
+            f=f*i;
+        }
+        printf("%d",f);
+        return 0;
+    }*/
+
+// 11 write a program calculate power of given number
+/*#include <stdio.h>
+#include<math.h>
+    int main() {
+        int a, b,c;
+        printf("enter number")l;
+        scanf("%d",&a);
+        printf("enter power");
+        scanf("%d",&b);
+        c =pow(a,b);
+        printf("%d",c);
+        return 0;
+    }
+*/
+// 10 write  a program display table
+/*#include <stdio.h>
+    int main() {
+        int a,i;
+        printf("enter number");
+        scanf("%d",&a);
+        for (i=1; i<=10; i++) {
+            printf("\n%d*%d=%d",a,i,i*a);
+        }
+        return 0;
+    }
+*/
+// 9 write a program even number between given range
+/*#include <stdio.h>
+    int main() {
+        int a,b,i;
+        printf("enter range (a,b):");
+        scanf("%d%d",&a,&b);
+        printf("Even:");
+        for(i=a; i<=b; i++) {
+            if (i%2==0) {
+                printf("\t%d",i);
+            }
+        }
+        return 0;
+    }
+    */
+
+// 8 write a  program display range
+/*#include <stdio.h>
+    int main() {
+        int a,b,i;
+        printf("enter range (a,b):");
+        scanf("%d%d",&a,&b);
+        for(i=a; i<=b; i++) {
+            printf("%d",i);
+        }
+        return 0;
+    }
+*/
+// 7 write  a program  greater number from 2
+/*#include <stdio.h>
+    int main() {
+        int a,b;
+        printf("enter two numbers:");
+        scanf("%d%d",&a,&b);
+        if(a>b) {
+            printf("%d greater than %d",a,b);
+        }
+        else {
+            printf("%d greater than %d",b,a);
+        }
+        return 0;
+    }
+
+*/
+// 6 write a program even odd
+/*#include <stdio.h>
+    int main() {
+        int a;
+        printf("enter number to check even or odd:");
+        scanf("%d",&a);
+        if (a%2==0) {
+            printf("%d is even",a);
+        }
+        else {
+            printf("%d",&a);
+        }
+        return 0;
+    }
+
+*/
+// 5 write a program to calculate the mean average ofgi en 2 or 3 or 5 number
+/*#include <stdio.h>
+    int main() {
+        int a,b,c,d,e, option, average;
+        printf("enter number calculate average 2 or 3 or 5");
+        printf("\nenter option:");
+        scanf("%d",&option);
+        if(option==2) {
+            printf("enter two number:");
+            scanf("%d%d",&a,&b);
+            average=(a+b)/2;
+            printf("average of  two numbers:%d", average);
+        }
+        else if(option==3) {
+            printf("enter three number:");
+            scanf("%d%d%d",&a,&b,&c);
+            average=(a+b+c)/3;
+            printf("average of three numbers:%d", average);
+        }
+        else if (option==5) {
+            printf("enter five:");
+            scanf("%d%d%d%d%d",&a,&b,&c,&d,&e);
+            average=(a+b+c+d+e)/5;
+            printf("average of five numbers:%d", average);
+        };
+
+        return 0;
+    }
+
+*/
+// 4 write a program calculate sum of natural number
+/*#include <stdio.h>
+    int main() {
+        int a, i, sum = 0;
+
+        printf("Enter a positive integer: ");
+        scanf("%d", &a);
+
+        for (i = 1; i <= a; i++) {
+            sum += i;
+        }
+
+        printf("Sum = %d", sum);
+        return 0;
+    }
+*/
+// 3 write a program to input the day number and display day of week
+/*#include<stdio.h>
+    int main() {
+        int a;
+        printf("enter number:");
+        scanf("%d",&a);
+        switch (a) {
+        case 1:
+            printf("Monday");
+            break;
+        case 2 :
+            printf("Tuesday");
+        case 3:
+            printf("Wednesday");
+            break;
+        case 4:
+            printf("Thursday");
+            break;
+        case 5:
+            printf("Friday");
+            break;
+        case 6:
+            printf("Saturday");
+            break;
+        case 7:
+            printf("Sunday");
+            break;
+        default:
+            printf("enter correct option");
+            break;
+        }
+
+        return 0;
+    }
+
+*/
+//2 write a program square and cude
+/*#include<stdio.h>
+    int main() {
+        int a,b,c;
+        printf("enter number");
+        scanf("%d",&a);
+        b=a*a;
+        c=a*a*a;
+        printf("\nsquare :%d",b);
+        printf("\ncube :%d",c);
+        return 0;
+    }
+*/
+
+//1 write a program addition of two numbers
+/*#include<stdio.h>
+    int main() {
+        int a,b,sum;
+        printf("enter first  number :");
+        scanf("%d",&a);
+        printf("enter second number");
+        scanf("%d",&b);
+        sum=a+b ;
+        printf("sum of tow number:%d",sum);
+        return 0;
+    }*/
+
+//13 write a program to calculate sum of digits of a given number
+/*#include<stdio.h>
+    int main()
+    {
+        int n,sum=0,m;
+        printf("Enter a number:");
+        scanf("%d",&n);
+        while(n>0)
+        {
+            m=n%10;
+            sum=sum+m;
+            n=n/10;
+        }
+        printf("Sum is=%d",sum);
+        return 0;
+    }*/
